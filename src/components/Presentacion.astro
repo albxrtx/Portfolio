@@ -1,0 +1,69 @@
+---
+import GithubIcon from "./icons-components/GithubIcon.astro";
+import LinkedinIcon from "./icons-components/LinkedinIcon.astro";
+import EmailIcon from "./icons-components/EmailIcon.astro";
+import BriefcaseIcon from "./icons-components/BriefcaseIcon.astro";
+import FileIcon from "./icons-components/FileIcon.astro";
+---
+
+<section
+  id="presentacion"
+  class="h-screen flex items-center mx-[200px] gap-x-16"
+>
+  <img src="/picture.webp" alt="" class="w-64" />
+  <div class="flex flex-col gap-5 text-slate-50">
+    <h1 class="w-fit text-5xl font-bold">
+      Buenas, soy <span class="text-fade">Alberto Marian</span>
+    </h1>
+    <p class="w-[85%] text-lg text-pretty">
+      Actualmente estudiando Desarrollo de Aplicaciones Multiplataforma(DAM) en
+      busca de una oportunidad de comenzar en el mundo laboral.
+    </p>
+    <div class="flex gap-4">
+      <span
+        class="w-fit px-4 py-[2px] flex items-center gap-2 text-green-200 rounded-2xl border-green-500 border-2 bg-green-500 bg-opacity-60"
+      >
+        <BriefcaseIcon />
+        Buscando prácticas</span
+      >
+      <a
+        href="/CV_alberto_marian.pdf"
+        download="/CV_alberto_marian.pdf"
+        class="w-fit px-4 py-[2px] flex items-center gap-2 text-red-200 rounded-2xl border-red-500 border-2 bg-red-500 bg-opacity-60 duration-200 hover:bg-red-500"
+      >
+        <FileIcon />
+        Descargar CV</a
+      >
+    </div>
+    <div class="flex gap-5">
+      <a
+        href="https://github.com/albxrtx"
+        target="_blank"
+        class="flex items-center gap-2 tag"
+      >
+        <GithubIcon />
+        Github</a
+      >
+      <a
+        href="https://www.linkedin.com/in/alberto-marian-nechita/"
+        target="_blank"
+        class="flex items-center gap-2 tag"
+      >
+        <LinkedinIcon />
+        Linkedin</a
+      >
+      <span class="flex items-center gap-2 tag">
+        <EmailIcon />
+        albertomariannechita@gmail.com</span
+      >
+    </div>
+  </div>
+  <div
+    class="w-0 h-0 absolute bottom-0 right-0 shadow-[10px_10px_150px_150px_#3c99fd99]"
+  >
+  </div>
+  <div
+    class="w-0 h-0 absolute top-0 left-0 shadow-[10px_10px_150px_150px_#3c99fd99]"
+  >
+  </div>
+</section>
