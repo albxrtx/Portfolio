@@ -1,0 +1,75 @@
+---
+interface Props {
+  id: string;
+  videoSrc: string;
+}
+
+const { id, videoSrc } = Astro.props;
+---
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+  }
+
+  .modal-content video {
+    width: 100%;
+    height: 650px;
+  }
+</style>
+
+<div class="modal" id={id}>
+  <div class="modal-content">
+    <video
+      class="rounded"
+      controls
+      controlsList="nodownload nofullscreen"
+      muted
+      autoplay
+      src={videoSrc}></video>
+  </div>
+</div>
+
+<script define:vars={{ id }}>
+  const modal = document.getElementById(id);
+  const video = modal?.querySelector("video");
+
+  function closeModal() {
+    modal?.classList.remove("active");
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal?.classList.contains("active")) {
+      closeModal();
+    }
+  });
+</script>

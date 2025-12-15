@@ -1,16 +1,17 @@
 ---
 import LinkIcon from "./icons-components/LinkIcon.astro";
+import VideoModal from "./VideoModal.astro";
 ---
 
 <section
   id="proyectos"
-  class="h-screen flex items-center justify-between mx-[200px] text-slate-50"
+  class="h-screen flex items-center justify-between mx-[200px] text-slate-50 snap-start"
 >
   <div class="w-[45%] flex flex-col gap-3">
-    <div class="flex justify-between">
-      <h1 class="text-2xl font-bold text-blue-500">Astroblocks</h1>
+    <div class="flex w-full justify-between">
+      <h1 class="text-2xl font-bold text-blue-500">App Veterianario</h1>
       <a
-        href="https://github.com/albxrtx/astro-blocks"
+        href="https://github.com/albxrtx/veterinario-app"
         target="_blank"
         class="flex items-center justify-center gap-1 w-fit px-3 rounded-2xl border-[#8c8f94] border-2 bg-[#8c8f94] bg-opacity-60 hover:bg-opacity-100"
       >
@@ -18,25 +19,32 @@ import LinkIcon from "./icons-components/LinkIcon.astro";
         Github
       </a>
     </div>
-    <p class="text-slate-200">
-      Descarga múltiples componentes para tus proyectos en Astro
+    <p class="text-slate-200 line-clamp-2 min-h-[3rem]">
+      Aplicación web para la gestión de una clínica veterinaria
     </p>
-    <div class="overflow-hidden duration-[2s] rounded-xl">
-      <img
-        src="/Portfolio/project2.webp"
-        alt="imagen proyecto"
-        class="w-[100%] hover:scale-105 transition-transform"
-      />
+    <div
+      class="overflow-hidden duration-[2s] rounded-xl cursor-pointer"
+      id="openModal1"
+    >
+      <img src="../../public/project1.png" alt="App Veterinario" />
     </div>
     <div class="flex justify-between items-center w-[100%] text-sm">
       <div class="flex gap-2">
         <span
-          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#ff5d01] border-2 bg-[#ff5d01] bg-opacity-60"
-          >Astro</span
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#5382a1] border-2 bg-[#5382a182] bg-opacity-60"
+          >Java</span
         >
         <span
-          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#38bdf8] border-2 bg-[#38bdf8] bg-opacity-60"
-          >Tailwind</span
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#68bd45] border-2 bg-[#68bd4582] bg-opacity-60"
+          >SprinBoot</span
+        >
+        <span
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#ff5d01] border-2 bg-[#ff5d01] bg-opacity-60"
+          >Html</span
+        >
+        <span
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#663399] border-2 bg-[#66339982] bg-opacity-60"
+          >Css</span
         >
         <span
           class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#f0db4f] border-2 bg-[#f0db4f] bg-opacity-60"
@@ -48,9 +56,9 @@ import LinkIcon from "./icons-components/LinkIcon.astro";
   <!-- *** -->
   <div class="w-[45%] flex flex-col gap-3">
     <div class="flex justify-between">
-      <h1 class="text-2xl font-bold text-blue-500">GESA</h1>
+      <h1 class="text-2xl font-bold text-blue-500">QrLocker</h1>
       <a
-        href="https://github.com/albxrtx/GESA"
+        href="https://github.com/albxrtx/qrlocker"
         target="_blank"
         class="flex items-center justify-center gap-1 w-fit px-3 rounded-2xl border-[#8c8f94] border-2 bg-[#8c8f94] bg-opacity-60 hover:bg-opacity-100"
       >
@@ -58,15 +66,14 @@ import LinkIcon from "./icons-components/LinkIcon.astro";
         Github
       </a>
     </div>
-    <p class="text-slate-200">
-      Herramienta para organizar y aumentar la productividad de la empresa
+    <p class="text-slate-200 line-clamp-2 min-h-[3rem]">
+      App móvil para reservar taquillas mediante códigos QR
     </p>
-    <div class="overflow-hidden duration-[2s] rounded-xl">
-      <img
-        src="/Portfolio//project1.webp"
-        alt="imagen proyecto"
-        class="w-[100%] hover:scale-105 transition-transform"
-      />
+    <div
+      class="overflow-hidden duration-[2s] rounded-xl cursor-pointer"
+      id="openModal2"
+    >
+      <img src="../../public/project2.png" height="100px" alt="QrLocker" />
     </div>
     <div class="flex justify-between items-center w-[100%] text-sm">
       <div class="flex gap-2">
@@ -75,23 +82,36 @@ import LinkIcon from "./icons-components/LinkIcon.astro";
           >Python</span
         >
         <span
-          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-orange-500 border-2 bg-orange-500 bg-opacity-60"
-          >Html</span
-        >
-        <span
-          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#663399] border-2 bg-[#663399] bg-opacity-60"
-          >Css</span
-        >
-        <span
-          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#f0db4f] border-2 bg-[#f0db4f] bg-opacity-60"
-          >JavaScript</span
-        >
-        <span
-          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#8c8f94] border-2 bg-[#8c8f94] bg-opacity-60"
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#8c8f94] border-2 bg-[#8c8f9482] bg-opacity-60"
           >Flask</span
+        >
+        <span
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#cb19cd] border-2 bg-[#cb19cd82] bg-opacity-60"
+          >Kotlin</span
+        >
+        <span
+          class="flex items-center justify-center gap-1 w-fit px-4 py-[2px] rounded-2xl border-[#3ecf8e] border-2 bg-[#3ecf8e82] bg-opacity-60"
+          >Supabase</span
         >
       </div>
     </div>
   </div>
-  <!-- *** -->
 </section>
+
+<VideoModal id="modal1" videoSrc="public/project1_video.mp4" />
+<VideoModal id="modal2" videoSrc="public/project2_video.mp4" />
+
+<script>
+  const openModal1 = document.getElementById("openModal1");
+  const openModal2 = document.getElementById("openModal2");
+  const modal1 = document.getElementById("modal1");
+  const modal2 = document.getElementById("modal2");
+
+  openModal1?.addEventListener("click", () => {
+    modal1?.classList.add("active");
+  });
+
+  openModal2?.addEventListener("click", () => {
+    modal2?.classList.add("active");
+  });
+</script>
